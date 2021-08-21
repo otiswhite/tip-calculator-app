@@ -1,0 +1,41 @@
+/* config */
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+$font-stack: Arial, Helvetica, sans-serif;
+$font-monospace: 'Space Mono', monospace;
+
+// colors
+// primary
+$color-strong-cyan: hsl(172, 67%, 45%);
+// neutral
+$color-very-dark-cyan: hsl(183, 100%, 15%);
+$color-darker-grayish-cyan: hsl(186, 14%, 43%);
+$color-dark-grayish-cyan: hsl(184, 14%, 56%);
+$color-light-grayish-cyan: hsl(185, 41%, 84%);
+$color-lighter-grayish-cyan: hsl(189, 41%, 95%);
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-red: hsl(0, 70%, 52%);
+
+// reset and defaults
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a,
+ul,
+ol {
+  text-decoration: none;
+  color: unset;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-monospace;
+  font-size: 24px;
+}

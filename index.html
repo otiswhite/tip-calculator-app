@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <div class="container">
+    <div class="splitter">
+      <div class="splitter__logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="splitter__calc">
+        <div class="calc">
+          <div class="calc__controls">
+            <div class="controls-bill">
+              <label class="controls-bill__label" for="bill">Bill<span class="hide" id="total-error">Can't be zero</span></label>
+              <input class="controls-bill__input" type="number" step="0.01" min="0.1"
+                id="total-bill" placeholder="0.00">
+              <!-- oninput="this.value = Math.abs(this.value)" -->
+            </div>
+            <div class="controls-tip">
+              <label class="controls-tip__label" for="select-tip">Select Tip %</label>
+              <div class="controls-tip__tips">
+                <input class="controls-tip__tips__input" type="button" value="5" >
+                <input class="controls-tip__tips__input" type="button" value="10">
+                <input class="controls-tip__tips__input" type="button" value="15">
+                <input class="controls-tip__tips__input" type="button" value="25">
+                <input class="controls-tip__tips__input" type="button" value="50">
+                <div class="controls-tip__tips__input custom-tip">
+                  <input class="controls-tip__tips__input custom-tip__input" type="number"
+                    min="0.1" step="0.1" id="custom-tip" placeholder="Custom" value="">
+                </div>
+              </div>
+            </div>
+            <div class="controls-people">
+              <label class="controls-people__label" for="people">Number of People<span class="hide" id="people-error">Can't be zero</span></label>
+              <input class="controls-people__input" id="no-of-people" type="number"
+                step="1" min="1" placeholder="0">
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="result-tip">
+              <div class="result-tip__label">
+                Tip Amount<div class="result-tip__label__sub">/ person</div>
+              </div>
+              <div class="result-tip__amount">
+                $<span id="result-tip" class="result-tip__amount__value">0.00</span>
+              </div>
+            </div>
+            <div class="result-total">
+              <div class="result-total__label">
+                Total<div class="result-total__label__sub">/ person</div>
+              </div>
+              <div class="result-total__amount">
+                $<span id="result-total" class="result-tip__amount__value">0.00</span>
+              </div>
+            </div>
+            <form class="result-reset">
+              <button id="reset-calc-btn" class="result-reset__btn">Reset</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  
+  <!-- custom JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>

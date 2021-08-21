@@ -1,0 +1,286 @@
+@import 'config';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-light-grayish-cyan;
+}
+
+.splitter {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+
+  @media(min-width: 768px) {
+    max-width: 900px;
+  }
+}
+
+.splitter__logo {
+  text-align: center;
+  margin: 2rem;
+}
+
+.splitter__calc {
+  background: $color-white;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  border-radius: 1rem;
+  box-shadow:
+  0 1.7px 2.5px rgba(0, 0, 0, 0.025),
+  0 4.3px 6.4px rgba(0, 0, 0, 0.035),
+  0 8.9px 13.1px rgba(0, 0, 0, 0.045),
+  0 18.3px 27px rgba(0, 0, 0, 0.055),
+  0 50px 74px rgba(0, 0, 0, 0.08);
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 768px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.calc__controls {
+  flex: 1 1 50%;
+}
+
+.controls-bill {
+
+  &__label {
+    color: $color-very-dark-cyan;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    text-align: right;
+    border: none;
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    font-family: $font-monospace;
+    color: $color-very-dark-cyan;
+    background: url(/images/icon-dollar.svg) $color-lighter-grayish-cyan no-repeat scroll 1rem 50%;
+    outline-color: $color-strong-cyan;
+  }
+}
+
+.controls-tip {
+  padding-top: 1rem;
+
+  &__label {
+    color: $color-very-dark-cyan;
+    font-size: 1.25rem;
+  }
+
+  &__tips {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    &__input {
+      flex: 1 1 110px;
+      border: none;
+      background: $color-very-dark-cyan;
+      color: $color-white;
+      font-family: $font-monospace;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      outline-color: $color-white;
+      border-radius: 0.25rem;
+
+      
+      &:hover {
+        background: $color-light-grayish-cyan;
+        color: $color-very-dark-cyan;
+      }
+
+      &:focus,
+      &:active {
+        background: $color-strong-cyan;
+        color: $color-very-dark-cyan;
+      }
+    }
+  }
+}
+
+.custom-tip {
+  display: inline-block;
+  flex: 1 1 110px;
+  padding: 0;
+  margin: 0;
+
+  &__input {
+    width: 100%;
+    text-align: center;
+    font-family: $font-monospace;
+    background: $color-lighter-grayish-cyan;
+    color: $color-very-dark-cyan;
+
+    &:hover {
+      background-color: $color-light-grayish-cyan;
+      outline-color: $color-strong-cyan;
+    }
+
+    &:focus {
+      background-color: $color-light-grayish-cyan;
+      outline-color: $color-strong-cyan;
+    }
+
+    &:active {
+      background-color: $color-light-grayish-cyan;
+      color: $color-very-dark-cyan;
+    }
+  }
+}
+
+.controls-people {
+    padding-top: 1rem;
+
+  &__label {
+    color: $color-very-dark-cyan;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    text-align: right;
+    border: none;
+    padding: 0.25rem 1rem;
+    font-size: 1.5rem;
+    font-family: $font-monospace;
+    color: $color-very-dark-cyan;
+    background: url(/images/icon-person.svg) $color-lighter-grayish-cyan no-repeat scroll 1rem 50%;
+    outline-color: $color-strong-cyan;
+  }
+}
+
+.calc__result {
+  background: $color-very-dark-cyan;
+  margin-top: 2rem;
+  flex: 1 1 50%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px){
+    margin-top: 0;
+  }
+}
+
+.result-tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  &__label {
+    color: $color-white;
+    font-size: 1.25rem;
+
+    &__sub {
+      color: $color-dark-grayish-cyan;
+      font-size: 1rem;
+    }
+  }
+
+  &__amount {
+    color: $color-strong-cyan;
+    font-weight: bold;
+    font-size: 1.75rem;
+
+    &__value {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.result-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+
+  &__label {
+    color: $color-white;
+    font-size: 1.25rem;
+
+
+    &__sub {
+      color: $color-dark-grayish-cyan;
+      font-size: 1rem;
+    }
+  }
+
+  &__amount {
+    color: $color-strong-cyan;
+    font-weight: bold;
+    font-size: 1.75rem;
+
+    &__value {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.result-reset {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  &__btn {
+    width: 100%;
+    background: $color-strong-cyan;
+    color: $color-very-dark-cyan;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 0.45rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    // transition: all 0.1s ease-in-out;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      background: $color-light-grayish-cyan;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}
+
+.selected-tip {
+  background: $color-strong-cyan;
+}
+
+#total-error,
+#people-error {
+  color: $color-red;
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
+}
