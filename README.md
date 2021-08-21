@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Screenshot](.screenshots/screenshot-desktop.jpg)
+![Desktop Screenshot](./screenshots/screenshot-desktop.jpg)
 
 ### Built with
 
